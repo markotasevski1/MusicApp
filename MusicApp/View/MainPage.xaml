@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.View.MainPage"
+             xmlns:model="clr-namespace:MusicApp.Model"
+             Title="MainPage">
+
+    <Grid >
+        <Button Text="GetDetailPage" BackgroundColor="PaleVioletRed" Command="{Binding NavigateCommand}"/>
+        <CollectionView>
+
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:Category}">
+                    <model:Category
+                    CategoryId="1"
+                    CategoryName="Pop" />
+                    <model:Category
+                    CategoryId="2"
+                    CategoryName="HipHop" />
+                    <model:Category
+                    CategoryId="3"
+                    CategoryName="Heavy Metal" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Category">
+
+                    <Label VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} : {1}">
+                                <Binding Path="CategoryId" />
+                                <Binding Path="CategoryName" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
