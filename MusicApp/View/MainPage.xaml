@@ -5,41 +5,38 @@
              xmlns:model="clr-namespace:MusicApp.Model"
              Title="MainPage">
 
-    <Grid >
-        <Button Text="GetDetailPage" BackgroundColor="PaleVioletRed" Command="{Binding NavigateCommand}"/>
-        <CollectionView>
 
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type model:Category}">
-                    <model:Category
-                    CategoryId="1"
-                    CategoryName="Pop" />
-                    <model:Category
-                    CategoryId="2"
-                    CategoryName="HipHop" />
-                    <model:Category
-                    CategoryId="3"
-                    CategoryName="Heavy Metal" />
-                </x:Array>
-            </CollectionView.ItemsSource>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Margin="30">
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:Category">
+            <Label
+                Text="Pick a genre"
+                HorizontalOptions="Center"
+            />
+            <Button
+                x:Name="HipHopBtn"
+                Text="HipHop"
+                Clicked="OnAboutClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="PopBtn"
+                Text="Pop"
+                Clicked="OnAboutClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="MetalBtn"
+                Text="Metal"
+                Clicked="OnAboutClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="RockBtn"
+                Text="Rock"
+                Clicked="OnAboutClicked"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
 
-                    <Label VerticalOptions="Center">
-                        <Label.Text>
-                            <MultiBinding StringFormat="{}{0} : {1}">
-                                <Binding Path="CategoryId" />
-                                <Binding Path="CategoryName" />
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
-
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-
-        </CollectionView>
-
-    </Grid>
 
 </ContentPage>

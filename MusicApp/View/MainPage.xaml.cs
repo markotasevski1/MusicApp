@@ -6,4 +6,8 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void OnAboutClicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//DetailPage");
+    }
 }
