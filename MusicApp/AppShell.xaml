@@ -7,10 +7,22 @@
     xmlns:view="clr-namespace:MusicApp.View"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+ 
+         <TabBar Route="main">
+        <ShellContent
         Shell.NavBarIsVisible="true"
         Title="Home"
         ContentTemplate="{DataTemplate view:MainPage}"
         Route="MainPage" />
+
+        <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Details"
+        ContentTemplate="{DataTemplate view:MainPage}"
+        Route="DetailPage" />
+
+
+
+            </TabBar> 
 
 </Shell>
