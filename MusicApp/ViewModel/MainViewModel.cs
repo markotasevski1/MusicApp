@@ -10,7 +10,8 @@ namespace MusicApp.ViewModel
         [ObservableProperty]
         string text;
 
-        [RelayCommand]
-        Task Navigate() => Shell.Current.GoToAsync(nameof(DetailPage));
+
+        //[RelayCommand]
+       // Task Navigate() => Shell.Current.GoToAsync(nameof(DetailPage));
     }
 }
