@@ -1,4 +1,4 @@
-﻿namespace MusicApp;
+﻿namespace Ukim.MusicApp;
 
 public partial class App : Application
 {
