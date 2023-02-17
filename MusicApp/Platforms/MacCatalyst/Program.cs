@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MusicApp;
+namespace Ukim.MusicApp;
 
 public class Program
 {

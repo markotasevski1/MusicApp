@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MusicApp;
+namespace Ukim.MusicApp;
 
 [Application]
 public class MainApplication : MauiApplication

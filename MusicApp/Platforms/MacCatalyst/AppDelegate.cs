@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MusicApp;
+namespace Ukim.MusicApp;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

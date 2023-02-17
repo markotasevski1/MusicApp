@@ -1,12 +1,12 @@
-﻿using MusicApp.View;
+﻿using Ukim.MusicApp.Views;
 
-namespace MusicApp;
+namespace Ukim.MusicApp;
 
 public partial class AppShell : Shell
 {
 	public AppShell()
 	{
 		InitializeComponent();
-		Routing.RegisterRoute(nameof(DetailPage), typeof(DetailPage));
+		Routing.RegisterRoute(nameof(CategoriesPage), typeof(CategoriesPage));
 	}
 }

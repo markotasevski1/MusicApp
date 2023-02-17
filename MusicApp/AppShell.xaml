@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="MusicApp.AppShell"
+    x:Class="Ukim.MusicApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MusicApp"
-    xmlns:view="clr-namespace:MusicApp.View"
+    xmlns:local="clr-namespace:Ukim.MusicApp"
+    xmlns:views="clr-namespace:Ukim.MusicApp.Views"
     Shell.FlyoutBehavior="Disabled">
-
  
-         <TabBar Route="main">
+    <TabBar Route="main">
         <ShellContent
         Shell.NavBarIsVisible="true"
         Title="Home"
-        ContentTemplate="{DataTemplate view:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate views:CategoriesPage}"
+        Route="CategoriesPage" />
 
-        <ShellContent
+        <!--<ShellContent
         Shell.NavBarIsVisible="true"
         Title="Details"
-        ContentTemplate="{DataTemplate view:DetailPage}"
-        Route="DetailPage" />
+        ContentTemplate="{DataTemplate view:PostsView}"
+        Route="PostsView" />-->
 
-
-
-            </TabBar> 
+    </TabBar> 
 
 </Shell>
